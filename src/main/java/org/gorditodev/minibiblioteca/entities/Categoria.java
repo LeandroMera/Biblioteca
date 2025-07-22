@@ -18,4 +18,5 @@ public class Categoria {
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
     private List<Libro> libros = new ArrayList<>();
 
+
 }

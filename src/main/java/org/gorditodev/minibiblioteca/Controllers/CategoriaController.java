@@ -22,6 +22,11 @@ public class CategoriaController {
     @Autowired
     private LibroService libroService;
 
+    @GetMapping({"", "/"})
+    public String redirigirCategorias() {
+        return "redirect:/categorias/listar";
+    }
+
     @GetMapping("/listar")
     public String ListarCategorias(Model model){
         List<Categoria> categorias = categoriaService.findAll();
